@@ -31,15 +31,51 @@ body {
   box-shadow: 0 2px 3px 1px rgba(16, 22, 72, 0.478);
   padding: 2rem 5rem;
   color: white;
+  transform: translateX(100%);
+  opacity: 0;
+}
+
+.tes.showTex {
+  opacity: 1;
+  animation: tesAnim 11s linear;
+}
+
+@keyframes tesAnim {
+  0% {
+    transform: translateX(100%);
+  }
+  5% {
+    transform: translateX(0);
+  }
+  95% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
 }
 
 .bar {
   height: 5px;
-  width: 30%;
+  width: 100%;
   background-color: rgb(172, 180, 255);
   margin-bottom: 1rem;
   border-radius: 3px;
 }
+.bar.showBar {
+  animation: barAnim 9.5s linear;
+}
+
+@keyframes barAnim {
+  0% {
+    width: 0%;
+  }
+
+  100% {
+    width: 100%;
+  }
+}
+
 .text {
   width: 100%;
   margin: 1rem 0;
